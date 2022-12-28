@@ -1,15 +1,13 @@
-import datetime
+from datetime import datetime
 
-from Flask import Flask
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    today = datetime.datetime.now().strftime("%c")
-
-    return 'Hello, World!' + today
+    return 'Hello, World! ' + datetime.now().strftime("%c")
 
 @app.route('/about')
 def about():
-    return 'About'
+    return 'About ' + datetime.now().strftime("%c")
