@@ -5,7 +5,8 @@ This example shows how to use Flask 2 on Vercel with Serverless Functions using 
 
 ## Demo
 
-https://flask-python-template.vercel.app/
+<https://flask-python-template.vercel.app/>
+<https://vercel-python-flask.vercel.app/>
 
 ## How it Works
 
