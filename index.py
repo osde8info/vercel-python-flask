@@ -11,14 +11,22 @@ def home():
     return render_template(
         "home.html",
         name="yourname",
-        date=datetime.now())
+        date=datetime.now()
+    )
 
 
 @app.route("/about/")
 def about():
-    return render_template("about.html")
+    return render_template(
+        "about.html"
+    )
 
 
 @app.route("/contact/")
-def contact():
-    return render_template("contact.html")
+@app.route("/contact/<name>")
+def contact(name=None):
+    return render_template(
+        "contact.html",
+        name=name,
+        date=datetime.now()
+    )
