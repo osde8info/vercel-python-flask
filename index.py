@@ -1,13 +1,24 @@
 from datetime import datetime
 
-from flask import Flask
+from flask import Flask, render_template
+
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def home():
-    return 'Hello, World! ' + datetime.now().strftime("%c")
+    return render_template(
+        "home.html",
+        name="yourname",
+        date=datetime.now())
 
-@app.route('/about')
+
+@app.route("/about/")
 def about():
-    return 'About ' + datetime.now().strftime("%c")
+    return render_template("about.html")
+
+
+@app.route("/contact/")
+def contact():
+    return render_template("contact.html")
